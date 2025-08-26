@@ -20,7 +20,8 @@ def to_datetime(unix_time:int, offset: int = 0):
 @app.get("/to-unix", summary="Convert ISO datetime to Unix time")
 def to_unix(dt: str):
     """
-    請在 Swagger UI 裡輸入例如: 2025-08-18T15:00:00+08:00
+    請在 Swagger UI 裡輸入如: 2025-08-18T13:00:00+08:00
+    (請勿在瀏覽器中直接輸入)
     """
     dt_obj = datetime.fromisoformat(dt)
     if dt_obj.tzinfo is None:
